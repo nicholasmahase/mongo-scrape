@@ -14,7 +14,7 @@ module.exports = {
       .then(function(dbHeadline) {
         if (dbHeadline.length === 0) {
           res.json({
-            message: "No new articles today. Check back tomorrow!"
+            message: "Sorry no results found please check back tomorrow!"
           });
         }
         else {
@@ -27,7 +27,7 @@ module.exports = {
       .catch(function(err) {
         // This query won't insert articles with duplicate headlines, but it will error after inserting the others
         res.json({
-          message: "Scrape complete!!"
+          message: "Scrape has been completed!!"
         });
       });
   }
